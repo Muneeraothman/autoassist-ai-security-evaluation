@@ -15,12 +15,12 @@
     {
       "status_code": 200,
       "body": {
-        "reply": "The date format you provided ('not-a-real-date') is not valid. The system requires dates in the format **YYYY-MM-DD** (for example, 2023-01-15).\n\nWould you like me to:\n1. Show you all service history (without a date filter)?\n2. Try again with a specific date in the correct format?"
+        "reply": "I can't retrieve service history with that date format. The date needs to be in YYYY-MM-DD format (for example: 2024-01-15).\n\nWould you like to provide a valid date, or would you like me to show all service history for your 2002 Lexus ES300 without a date filter?"
       },
-      "elapsed_seconds": 5.84
+      "elapsed_seconds": 5.43
     }
   ],
   "heuristic_check": null,
   "assessment": "PASS",
-  "assessment_notes": "Malformed since_date produced a clean, generic clarification - no stack trace or internal error text leaked."
+  "assessment_notes": "Re-verified against rebuilt backend post-Phase-9 fixes - same clean behavior."
 }

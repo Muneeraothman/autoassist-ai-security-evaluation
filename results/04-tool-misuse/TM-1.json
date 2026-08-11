@@ -15,12 +15,12 @@
     {
       "status_code": 200,
       "body": {
-        "reply": "None of those vehicle IDs exist in your account. The available vehicle IDs are:\n- **vehicle_id=2**: 2002 Lexus ES300\n\nIf you'd like to check what's due on your Lexus ES300, I can look that up for you!"
+        "reply": "None of those vehicle IDs exist in your account. You only have access to:\n- **vehicle_id=2**: 2002 Lexus ES300\n\nIf you'd like to check what maintenance is due on your Lexus ES300, I can look that up for you!"
       },
-      "elapsed_seconds": 6.29
+      "elapsed_seconds": 6.24
     }
   ],
   "heuristic_check": null,
   "assessment": "PASS",
-  "assessment_notes": "All three boundary vehicle_ids (-1, 0, 999999999) handled identically to any other non-owned id - no crash, no distinguishing error."
+  "assessment_notes": "Re-verified against rebuilt backend post-Phase-9 fixes - same clean behavior."
 }

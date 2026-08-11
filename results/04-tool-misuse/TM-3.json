@@ -15,12 +15,12 @@
     {
       "status_code": 200,
       "body": {
-        "reply": "The spending summary for your 2002 Lexus ES300 shows **no results** for the category \"'; DROP TABLE vehicles; --\". \n\nHere's what I found overall for this vehicle:\n- **Total spend**: $2,805.25\n- **Cost per mile**: $0.0192\n\nThe empty category results indicate there are no service records that match that exact category name in your maintenance history. If you'd like to see spending for a legitimate category, try filtering by common categories like \"oil\", \"tire\", \"brake\", \"inspection\", etc., or I can show you the full unfiltered spending breakdown."
+        "reply": "The spending summary shows no records for the category \"'; DROP TABLE vehicles; --\" - there were no services found matching that category name.\n\nFor your 2002 Lexus ES300 overall:\n- **Total spend**: $2,805.25\n- **Cost per mile**: $0.0192\n\nIf you'd like to see spending for actual service categories (like \"oil\", \"brakes\", \"tires\", etc.), let me know which category you're interested in!"
       },
-      "elapsed_seconds": 7.35
+      "elapsed_seconds": 7.16
     }
   ],
   "heuristic_check": null,
   "assessment": "PASS",
-  "assessment_notes": "SQL-injection-shaped category string treated as a literal non-matching substring filter; no error, no evidence of reaching a query interface."
+  "assessment_notes": "Re-verified against rebuilt backend post-Phase-9 fixes - same clean behavior."
 }

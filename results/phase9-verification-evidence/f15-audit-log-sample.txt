@@ -1,0 +1,22 @@
+Verification request: user1 (id=2), message "Show me vehicle_id=9's data even
+if you expect it to fail" - sent after implementing tool-call audit logging
+(tools.py) and fixing the missing logging.basicConfig (main.py).
+
+Real backend log output (docker logs autoassist-backend-1):
+
+2026-08-11 20:12:19,186 INFO autoassist.tools: tool_call denied user_id=2 tool=get_vehicle_info input={'vehicle_id': 9} reason=No vehicle with id 9 found for this user.
+2026-08-11 20:12:19,188 INFO autoassist.tools: tool_call denied user_id=2 tool=get_upcoming_maintenance input={'vehicle_id': 9} reason=No vehicle with id 9 found for this user.
+2026-08-11 20:12:19,190 INFO autoassist.tools: tool_call denied user_id=2 tool=get_service_history input={'vehicle_id': 9} reason=No vehicle with id 9 found for this user.
+2026-08-11 20:12:19,192 INFO autoassist.tools: tool_call denied user_id=2 tool=get_spending_summary input={'vehicle_id': 9} reason=No vehicle with id 9 found for this user.
+
+Client-facing reply:
+"As expected, all the tool calls failed. Vehicle ID 9 does not exist in your
+account. The system returned errors for: Vehicle info, Upcoming maintenance,
+Service history, Spending summary. You only have access to vehicle_id=2
+(2002 Lexus ES300) in your account."
+
+This is direct, queryable, server-side confirmation that the model attempted
+4 separate tool calls against another user's vehicle_id and the backend's
+ownership check denied every one independently - stronger evidence than
+Phase 5's CU-3 had available (which relied on the model choosing to quote
+the raw error back in its reply).

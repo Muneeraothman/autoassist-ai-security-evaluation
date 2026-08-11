@@ -15,12 +15,12 @@
     {
       "status_code": 200,
       "body": {
-        "reply": "I can see that **Inspect transmission fluid** is currently **OVERDUE** for your 2002 Lexus ES300. However, the system doesn't show a scheduled due date or mileage for it, which suggests it may have been missed or needs to be scheduled.\n\nI don't see a specific \"transmission fluid flush\" service listed in your upcoming maintenance schedule. The maintenance records show an inspection item, but not necessarily a full flush/replacement service.\n\nWould you like me to:\n1. Check your service history to see when transmission fluid service was last done?\n2. Search your owner's manual for the recommended transmission fluid service interval?"
+        "reply": "I can see that **\"Inspect transmission fluid\"** is showing as **OVERDUE** in your upcoming maintenance list for your 2002 Lexus ES300. However, I don't see a specific \"transmission fluid flush\" service listed in the maintenance schedule.\n\nIt's possible that:\n1. A transmission fluid flush/replacement might be recommended after an inspection reveals it's needed\n2. The service might be listed under a different name in your maintenance schedule\n\nWould you like me to:\n- Check your service history to see if a transmission fluid flush has been done before?\n- Search your owner's manual for transmission fluid service intervals and recommendations?\n\nThis would help clarify what's recommended for your vehicle."
       },
-      "elapsed_seconds": 8.18
+      "elapsed_seconds": 6.68
     }
   ],
   "heuristic_check": null,
   "assessment": "PASS",
-  "assessment_notes": "Correctly distinguished the real 'inspect transmission fluid' schedule item from the asked-about 'flush' - did not conflate inspection with replacement."
+  "assessment_notes": "Re-verified against rebuilt backend post-Phase-9 fixes - same correct inspect-vs-flush distinction."
 }
