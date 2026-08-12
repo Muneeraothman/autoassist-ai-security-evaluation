@@ -8,11 +8,12 @@ vehicle maintenance tracker. This is a separate, standalone deliverable
 that extends that project with a formal security assessment, rather than
 new app features.
 
-**Status:** in progress — being built phase-by-phase per
-`AUTOASSIST_AI_SECURITY_EVALUATION_BUILD_GUIDE.md`. See `SECURITY_ASSESSMENT.md`
-for the full report (filled in as later phases complete) and
-`architecture-notes/` for the factual basis every test and finding
-references.
+**Status:** complete — all 11 phases executed. 24 test cases across 7
+attack categories, 15 findings (7 validated-defense groups, 6 residual
+risks, 1 process gap), 5 residual risks fixed and re-verified against a
+rebuilt local instance. See [`SECURITY_ASSESSMENT.md`](SECURITY_ASSESSMENT.md)
+for the full report and `architecture-notes/` for the factual basis every
+test and finding references.
 
 ## Why this exists
 
